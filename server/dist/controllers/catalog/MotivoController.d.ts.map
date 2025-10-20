@@ -1,0 +1,1 @@
+{"version":3,"file":"MotivoController.d.ts","sourceRoot":"","sources":["../../../src/controllers/catalog/MotivoController.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AAajD,QAAA,MAAM,gBAAgB;iBACD,OAAO,OAAO,QAAQ;kBAKrB,OAAO,OAAO,QAAQ;kBAgBtB,OAAO,OAAO,QAAQ;kBAwBtB,OAAO,OAAO,QAAQ;CAiB3C,CAAC;AAEF,eAAe,gBAAgB,CAAC"}

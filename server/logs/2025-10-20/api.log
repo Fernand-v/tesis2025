@@ -1,0 +1,310 @@
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-20 07:15:12
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/auth/profile
+ESTADO: 401
+RESPUESTA: Token invalido
+DETALLE: jwt expired
+----
+SECCION: ERROR
+MOMENTO: 2025-10-20 07:16:11
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/cash-audits?mine=true
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_arqueo_caja_list does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-20 07:16:11
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/cash-audits?mine=true
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_arqueo_caja_list does not exist
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 08:24:51
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Field 'DARQ_ARQUEO' doesn't have a default value
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 08:25:04
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Field 'DARQ_ARQUEO' doesn't have a default value
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 08:30:38
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Column count doesn't match value count at row 1
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 08:32:16
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Column count doesn't match value count at row 1
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 08:36:20
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Column count doesn't match value count at row 1
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:38:45
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-20 10:40:10
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/reports
+ESTADO: 401
+RESPUESTA: Token no proporcionado
+----
+SECCION: ROUTING
+MOMENTO: 2025-10-20 10:40:10
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /favicon.ico
+ESTADO: 404
+RESPUESTA: Recurso no encontrado
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:42:11
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: ROUTING
+MOMENTO: 2025-10-20 10:43:19
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/reports
+ESTADO: 404
+RESPUESTA: Recurso no encontrado
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:45:33
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:46:08
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Cannot read properties of undefined (reading 'nombreReporte')
+DETALLE: Cannot read properties of undefined (reading 'nombreReporte')
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:47:22
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:47:38
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Falta el nombre del reporte
+DETALLE: Falta el nombre del reporte
+----
+SECCION: ERROR
+MOMENTO: 2025-10-20 10:50:38
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: Expected ',' or '}' after property value in JSON at position 197 (line 9 column 4)
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:51:38
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:52:21
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:53:08
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:53:14
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:59:28
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-20 10:59:35
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/reports
+ESTADO: 401
+RESPUESTA: Token no proporcionado
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 10:59:46
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: fetch failed
+DETALLE: fetch failed
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 11:17:48
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Failed to parse URL from 5555
+DETALLE: Failed to parse URL from 5555
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 11:18:00
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Failed to parse URL from 5555
+DETALLE: Failed to parse URL from 5555
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 11:19:14
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Failed to parse URL from 5555
+DETALLE: Failed to parse URL from 5555
+----
+SECCION: ERROR
+MOMENTO: 2025-10-20 11:19:41
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: Expected ',' or '}' after property value in JSON at position 201 (line 11 column 1)
+----
+SECCION: ERROR
+MOMENTO: 2025-10-20 11:19:58
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: Expected double-quoted property name in JSON at position 197 (line 9 column 3)
+----
+SECCION: REPORT
+MOMENTO: 2025-10-20 11:41:31
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/reports
+ESTADO: 500
+RESPUESTA: Failed to parse URL from 5555
+DETALLE: Failed to parse URL from 5555
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-20 15:02:05
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 401
+RESPUESTA: Token no proporcionado
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 15:04:47
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Ya existe un arqueo registrado para esta apertura
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 15:05:18
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Ya existe un arqueo registrado para esta apertura
+----
+SECCION: ARQUEO
+MOMENTO: 2025-10-20 15:05:32
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/cash-audits
+ESTADO: 400
+RESPUESTA: No se pudo registrar el arqueo
+DETALLE: Ya existe un arqueo registrado para esta apertura
+----

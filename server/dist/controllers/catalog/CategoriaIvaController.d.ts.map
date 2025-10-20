@@ -1,0 +1,1 @@
+{"version":3,"file":"CategoriaIvaController.d.ts","sourceRoot":"","sources":["../../../src/controllers/catalog/CategoriaIvaController.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AAajD,QAAA,MAAM,sBAAsB;iBACP,OAAO,OAAO,QAAQ;kBAKrB,OAAO,OAAO,QAAQ;kBAsBtB,OAAO,OAAO,QAAQ;kBA8BtB,OAAO,OAAO,QAAQ;CAiB3C,CAAC;AAEF,eAAe,sBAAsB,CAAC"}

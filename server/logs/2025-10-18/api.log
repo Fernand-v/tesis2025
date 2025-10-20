@@ -1,0 +1,897 @@
+SECCION: BACKUP
+MOMENTO: 2025-10-18 11:37:48
+IP: ::1
+METODO: POST
+ENDPOINT: /api/admin/backup/database
+ESTADO: 200
+RESPUESTA: Backup generado correctamente
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 17:01:31
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_list does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 17:01:31
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_list does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 17:01:36
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_list does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 17:05:03
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_list does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 17:05:03
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_list does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 17:05:06
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_list does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 17:05:07
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_list does not exist
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-18 18:52:20
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/auth/profile
+ESTADO: 401
+RESPUESTA: Token invalido
+DETALLE: jwt expired
+----
+SECCION: PEDIDO
+MOMENTO: 2025-10-18 18:53:46
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/orders
+ESTADO: 400
+RESPUESTA: No se pudo registrar el pedido
+DETALLE: Column 'PED_FECHA_ENTREGA' cannot be null
+----
+SECCION: PEDIDO
+MOMENTO: 2025-10-18 18:53:57
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/orders
+ESTADO: 400
+RESPUESTA: No se pudo registrar el pedido
+DETALLE: Column 'PED_FECHA_ENTREGA' cannot be null
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 19:25:46
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 19:30:13
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 19:35:44
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 19:35:44
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 19:38:55
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 19:38:55
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:03:19
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:03:30
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:08:32
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:34:34
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:34:42
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:34:50
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:35:11
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:35:24
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:35:27
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:36:11
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:36:39
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:37:14
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:37:22
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:38:10
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:38:19
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:38:28
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:38:37
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:39:18
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:39:33
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:40:11
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:40:36
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:41:01
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:41:18
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:41:37
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:41:48
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:42:35
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:42:46
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:43:14
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:44:11
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:44:27
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:44:45
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 20:45:12
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:00:38
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:00:41
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:01:02
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:01:23
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:01:32
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:02:07
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:02:40
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:03:20
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:03:38
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:03:49
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:03:57
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:04:25
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:04:36
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:04:46
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:06:05
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:07:55
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:08:30
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:08:31
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:09:08
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:10:30
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:11:23
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:11:45
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:12:10
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:18:23
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-18 21:19:37
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 401
+RESPUESTA: Token no proporcionado
+----
+SECCION: ROUTING
+MOMENTO: 2025-10-18 21:19:37
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /favicon.ico
+ESTADO: 404
+RESPUESTA: Recurso no encontrado
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:19:41
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:21:39
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:25:39
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:27:16
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:27:20
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-18 21:30:23
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/catalog/persons
+ESTADO: 401
+RESPUESTA: Token invalido
+DETALLE: jwt expired
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-18 21:30:23
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/catalog/inventory/items
+ESTADO: 401
+RESPUESTA: Token invalido
+DETALLE: jwt expired
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-18 21:30:23
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/catalog/states
+ESTADO: 401
+RESPUESTA: Token invalido
+DETALLE: jwt expired
+----
+SECCION: AUTORIZACION
+MOMENTO: 2025-10-18 21:30:23
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/cash-openings?mine=true
+ESTADO: 401
+RESPUESTA: Token invalido
+DETALLE: jwt expired
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:30:54
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:30:54
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:33:24
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:33:29
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:37:29
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:37:33
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:43:43
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:46:07
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:46:49
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:48:31
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: ERROR
+MOMENTO: 2025-10-18 21:49:11
+IP: 127.0.0.1
+METODO: GET
+ENDPOINT: /api/sales/orders
+ESTADO: 500
+RESPUESTA: Error interno del servidor
+DETALLE: PROCEDURE tesis2025.sp_fin_pedido_venta_search does not exist
+----
+SECCION: PEDIDO
+MOMENTO: 2025-10-18 21:51:33
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/orders
+ESTADO: 400
+RESPUESTA: No se pudo registrar el pedido
+DETALLE: Cannot add or update a child row: a foreign key constraint fails (`tesis2025`.`fin_detalle_arqueo_caja`, CONSTRAINT `fk_FIN_DETALLE_ARQUEO_CAJA_FIN_ARQUEO_CAJA1` FOREIGN KEY (`DARQ_CODIGO`, `DARQ_APERTURA`) REFERENCES `fin_arqueo_caja` (`ARQ_CODIGO`, `ARQ_AP)
+----
+SECCION: PEDIDO
+MOMENTO: 2025-10-18 21:51:53
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/orders
+ESTADO: 400
+RESPUESTA: No se pudo registrar el pedido
+DETALLE: Cannot add or update a child row: a foreign key constraint fails (`tesis2025`.`fin_detalle_arqueo_caja`, CONSTRAINT `fk_FIN_DETALLE_ARQUEO_CAJA_FIN_ARQUEO_CAJA1` FOREIGN KEY (`DARQ_CODIGO`, `DARQ_APERTURA`) REFERENCES `fin_arqueo_caja` (`ARQ_CODIGO`, `ARQ_AP)
+----
+SECCION: PEDIDO
+MOMENTO: 2025-10-18 21:51:58
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/orders
+ESTADO: 400
+RESPUESTA: No se pudo registrar el pedido
+DETALLE: Cannot add or update a child row: a foreign key constraint fails (`tesis2025`.`fin_detalle_arqueo_caja`, CONSTRAINT `fk_FIN_DETALLE_ARQUEO_CAJA_FIN_ARQUEO_CAJA1` FOREIGN KEY (`DARQ_CODIGO`, `DARQ_APERTURA`) REFERENCES `fin_arqueo_caja` (`ARQ_CODIGO`, `ARQ_AP)
+----
+SECCION: PEDIDO
+MOMENTO: 2025-10-18 21:53:39
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/orders
+ESTADO: 400
+RESPUESTA: No se pudo registrar el pedido
+DETALLE: Cannot add or update a child row: a foreign key constraint fails (`tesis2025`.`fin_detalle_arqueo_caja`, CONSTRAINT `fk_FIN_DETALLE_ARQUEO_CAJA_FIN_ARQUEO_CAJA1` FOREIGN KEY (`DARQ_CODIGO`, `DARQ_APERTURA`) REFERENCES `fin_arqueo_caja` (`ARQ_CODIGO`, `ARQ_AP)
+----
+SECCION: PEDIDO
+MOMENTO: 2025-10-18 21:53:43
+IP: 127.0.0.1
+METODO: POST
+ENDPOINT: /api/sales/orders
+ESTADO: 400
+RESPUESTA: No se pudo registrar el pedido
+DETALLE: Cannot add or update a child row: a foreign key constraint fails (`tesis2025`.`fin_detalle_arqueo_caja`, CONSTRAINT `fk_FIN_DETALLE_ARQUEO_CAJA_FIN_ARQUEO_CAJA1` FOREIGN KEY (`DARQ_CODIGO`, `DARQ_APERTURA`) REFERENCES `fin_arqueo_caja` (`ARQ_CODIGO`, `ARQ_AP)
+----

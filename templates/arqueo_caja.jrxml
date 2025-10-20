@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="arqueo_caja" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="30" bottomMargin="30" uuid="8a5ca33f-8d42-46fc-aad5-fec35bc8442f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="P_APERTURA" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+  arq.ARQ_CODIGO,
+  arq.ARQ_FECHA,
+  aper.APCAJ_CODIGO,
+  aper.APCAJ_CAJA,
+  caja.CAJ_DESC,
+  usuario.USER_NOMBRE,
+  usuario.USER_APELLIDO,
+  usuario.USER_USUARIO,
+  aper.APCAJ_MONTO_APER,
+  aper.APCAJ_MONTO_ANT,
+  credito.TOTAL_CREDITO,
+  debito.TOTAL_DEBITO,
+  det.DARQ_MONTO,
+  det.DARQ_CANTIDAD,
+  det.DARQ_DESCRIPCION,
+  det.DARQ_TIPO,
+  mon.TMON_DENOMINACION,
+  mon.TMON_SIMBOLO,
+  mon.TMON_TASA
+FROM fin_arqueo_caja arq
+JOIN fin_apertura_caja aper
+  ON aper.APCAJ_CODIGO = arq.ARQ_APERTURA
+JOIN fin_caja caja
+  ON caja.CAJ_CODIGO = aper.APCAJ_CAJA
+JOIN gen_usuario usuario
+  ON usuario.USER_CODIGO = aper.APCAJ_USER
+LEFT JOIN fin_detalle_arqueo_caja det
+  ON det.DARQ_APERTURA = arq.ARQ_APERTURA
+  AND det.DARQ_TIPO = 'D'
+LEFT JOIN gen_tpo_moneda mon
+  ON mon.TMON_CODIGO = det.DARQ_TPO_MONEDA
+LEFT JOIN (
+  SELECT DARQ_APERTURA, SUM(DARQ_MONTO) AS TOTAL_CREDITO
+    FROM fin_detalle_arqueo_caja
+   WHERE DARQ_TIPO = 'C'
+   GROUP BY DARQ_APERTURA
+) credito
+  ON credito.DARQ_APERTURA = arq.ARQ_APERTURA
+LEFT JOIN (
+  SELECT DARQ_APERTURA, SUM(DARQ_MONTO) AS TOTAL_DEBITO
+    FROM fin_detalle_arqueo_caja
+   WHERE DARQ_TIPO = 'D'
+   GROUP BY DARQ_APERTURA
+) debito
+  ON debito.DARQ_APERTURA = arq.ARQ_APERTURA
+WHERE arq.ARQ_APERTURA = $P{P_APERTURA}
+ORDER BY mon.TMON_DENOMINACION]]>
+	</queryString>
+	<field name="ARQ_CODIGO" class="java.lang.Integer"/>
+	<field name="ARQ_FECHA" class="java.sql.Date"/>
+	<field name="APCAJ_CODIGO" class="java.lang.Integer"/>
+	<field name="APCAJ_CAJA" class="java.lang.Integer"/>
+	<field name="CAJ_DESC" class="java.lang.String"/>
+	<field name="USER_NOMBRE" class="java.lang.String"/>
+	<field name="USER_APELLIDO" class="java.lang.String"/>
+	<field name="USER_USUARIO" class="java.lang.String"/>
+	<field name="APCAJ_MONTO_APER" class="java.lang.Double"/>
+	<field name="APCAJ_MONTO_ANT" class="java.lang.Double"/>
+	<field name="TOTAL_CREDITO" class="java.lang.Double"/>
+	<field name="TOTAL_DEBITO" class="java.lang.Double"/>
+	<field name="DARQ_MONTO" class="java.lang.Double"/>
+	<field name="DARQ_CANTIDAD" class="java.lang.Double"/>
+	<field name="DARQ_DESCRIPCION" class="java.lang.String"/>
+	<field name="DARQ_TIPO" class="java.lang.String"/>
+	<field name="TMON_DENOMINACION" class="java.lang.String"/>
+	<field name="TMON_SIMBOLO" class="java.lang.String"/>
+	<field name="TMON_TASA" class="java.lang.Double"/>
+	<variable name="TotalRetiro" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DARQ_MONTO} == null ? 0.0 : $F{DARQ_MONTO}]]></variableExpression>
+		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
+	</variable>
+	<variable name="MotivoPrincipal" class="java.lang.String">
+		<variableExpression><![CDATA[$F{DARQ_DESCRIPCION} != null && $F{DARQ_DESCRIPCION}.trim().length() > 0
+        ? $F{DARQ_DESCRIPCION}
+        : $V{MotivoPrincipal}]]></variableExpression>
+		<initialValueExpression><![CDATA[""]]></initialValueExpression>
+	</variable>
+	<variable name="TotalTeorico" class="java.lang.Double">
+		<variableExpression><![CDATA[($F{APCAJ_MONTO_APER} == null ? 0.0 : $F{APCAJ_MONTO_APER})
+      + ($F{APCAJ_MONTO_ANT} == null ? 0.0 : $F{APCAJ_MONTO_ANT})
+      + ($F{TOTAL_CREDITO} == null ? 0.0 : $F{TOTAL_CREDITO})]]></variableExpression>
+		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
+	</variable>
+	<title>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="535" height="24" uuid="e342f3f2-1f1c-4c3f-83aa-8840a5da7e8e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Arqueo de Caja]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="90">
+			<textField>
+				<reportElement x="0" y="5" width="330" height="18" uuid="09dcef11-916d-4fe6-95e4-af032dd6f0db"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Caja: " + ($F{CAJ_DESC} == null ? "" : $F{CAJ_DESC})]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="350" y="5" width="185" height="18" uuid="5b73c2ad-5bdc-4f14-b778-c1c97a4fd6fc"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ARQ_FECHA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="25" width="330" height="16" uuid="36f08677-5544-4869-8caf-266111d41182"/>
+				<textElement>
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Apertura N° " + $F{APCAJ_CODIGO} + " · Usuario: " + ($F{USER_NOMBRE} == null ? "" : $F{USER_NOMBRE}) + " " + ($F{USER_APELLIDO} == null ? "" : $F{USER_APELLIDO})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="45" width="535" height="20" uuid="224b56f2-7b67-4eb7-99b0-68ae8985fb0c"/>
+				<textElement>
+					<font fontName="Arial" size="10" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Motivo: " + $F{DARQ_DESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="68" width="535" height="20" uuid="278291e3-e1d3-44c2-abf0-2051636b28c5"/>
+				<textField pattern="###,##0">
+					<reportElement x="0" y="0" width="140" height="18" uuid="d4c17c45-68a1-43ef-8ff1-5c5f1b7ccb38"/>
+					<textElement>
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Apertura: " + new java.text.DecimalFormat("#,##0").format($F{APCAJ_MONTO_APER} == null ? 0 : $F{APCAJ_MONTO_APER})]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="150" y="0" width="140" height="18" uuid="da5d127b-e3f2-4ebb-8d0d-fb1f2ff7bfe8"/>
+					<textElement>
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Saldo anterior: " + new java.text.DecimalFormat("#,##0").format($F{APCAJ_MONTO_ANT} == null ? 0 : $F{APCAJ_MONTO_ANT})]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="300" y="0" width="235" height="18" uuid="726e9ea6-30c8-4bd1-b8f8-d1d12bd2d44a"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Saldo teórico: " + new java.text.DecimalFormat("#,##0").format($V{TotalTeorico})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20">
+			<line>
+				<reportElement x="0" y="19" width="535" height="1" uuid="9e17a866-739d-4223-a5b9-2a652ac9fead"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="2" width="250" height="16" uuid="ccaf2741-208e-45de-9b9e-19fbda25d873"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Moneda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="2" width="110" height="16" uuid="4b025710-cf6f-4f7c-8e9a-22079b053a05"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="2" width="135" height="16" uuid="f2cf5ad5-3fea-4b73-aba5-8a3dad885a28"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto (Gs.)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18">
+			<printWhenExpression><![CDATA[$F{DARQ_TIPO} != null]]></printWhenExpression>
+			<textField>
+				<reportElement x="0" y="0" width="250" height="16" uuid="1b706f41-07a3-4117-9a7d-2d0e08c7ff2f"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TMON_DENOMINACION} == null ? "General" : $F{TMON_DENOMINACION}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,##0">
+				<reportElement x="270" y="0" width="110" height="16" uuid="5234053d-7b60-4a97-9fe3-5431df3d9ea5"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DARQ_CANTIDAD} == null ? 0 : $F{DARQ_CANTIDAD}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,##0">
+				<reportElement x="400" y="0" width="135" height="16" uuid="e4a5a3b1-f748-4a89-bd68-4b6427b9d432"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DARQ_MONTO} == null ? 0 : $F{DARQ_MONTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="40">
+			<line>
+				<reportElement x="0" y="0" width="535" height="1" uuid="489e9153-1666-4f2f-9b00-916efefba01c"/>
+			</line>
+			<textField pattern="###,##0">
+				<reportElement x="350" y="10" width="185" height="18" uuid="8e413512-b1df-46d1-ab0a-f732fff6211a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalRetiro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="330" height="18" uuid="f353a4c6-8759-4e45-8d0e-4548a99ab3a6"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total retirado]]></text>
+			</staticText>
+			<textField pattern="###,##0">
+				<reportElement x="350" y="22" width="185" height="16" uuid="1e34f2d4-00f6-4edf-b301-02d4c9bc5f1d"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_CREDITO} == null ? 0 : $F{TOTAL_CREDITO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="22" width="330" height="16" uuid="7a6a9e26-f0a5-4e47-a557-985a4cd9a1bb"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[Ingresos por crédito acumulados]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="80">
+			<line>
+				<reportElement x="40" y="50" width="200" height="1" uuid="2bc40dd1-4d89-4ff6-8b82-5f83bb9b7f07"/>
+			</line>
+			<line>
+				<reportElement x="295" y="50" width="200" height="1" uuid="7768a9e6-fd8e-4c48-8c2a-62aa3cfa1cf1"/>
+			</line>
+			<staticText>
+				<reportElement x="40" y="55" width="210" height="16" uuid="729bb996-338d-4ed8-8d21-49bbff70d975"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[Firma usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="55" width="200" height="16" uuid="6cffbcfe-5fa2-47e3-82e5-1fd25068b258"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[Firma patrón]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="535" height="16" uuid="a70b72de-6516-4a1a-87e7-b03e57b7aaf2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Este comprobante deja constancia del retiro de efectivo conforme al arqueo registrado.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

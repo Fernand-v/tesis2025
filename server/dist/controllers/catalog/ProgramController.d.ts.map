@@ -1,0 +1,1 @@
+{"version":3,"file":"ProgramController.d.ts","sourceRoot":"","sources":["../../../src/controllers/catalog/ProgramController.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AA8BjD,QAAA,MAAM,iBAAiB;iBACF,OAAO,OAAO,QAAQ;kBAKrB,OAAO,OAAO,QAAQ;kBA+BtB,OAAO,OAAO,QAAQ;kBAuCtB,OAAO,OAAO,QAAQ;CAiB3C,CAAC;AAEF,eAAe,iBAAiB,CAAC"}

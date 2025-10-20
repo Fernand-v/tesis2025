@@ -1,0 +1,1 @@
+{"version":3,"file":"AperturaCajaController.d.ts","sourceRoot":"","sources":["../../../src/controllers/sales/AperturaCajaController.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AAGxC,OAAO,EAAE,oBAAoB,EAAE,MAAM,uBAAuB,CAAC;AAiB7D,QAAA,MAAM,sBAAsB;gBACR,oBAAoB,OAAO,QAAQ;kBAgBjC,oBAAoB,OAAO,QAAQ;CAyCxD,CAAC;AAEF,eAAe,sBAAsB,CAAC"}

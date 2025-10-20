@@ -1,0 +1,129 @@
+import { Request, Response } from 'express';
+import path from 'path';
+import { spawn } from 'child_process';
+import querystring from 'querystring';
+
+import config from '../../config/env';
+import { logRequestEvent } from '../../utils/logger';
+
+interface ReportRequestBody {
+  reporte?: string;
+  paramString?: string;
+  [key: string]: unknown;
+}
+
+const resolveJarPath = () => path.resolve(process.cwd(), 'ReportGenerator.jar');
+
+const buildDbParams = () => {
+  const dbUrlEnv = process.env.JASPER_DB_URL?.trim();
+  const dbUrl =
+    dbUrlEnv && dbUrlEnv.startsWith('jdbc:')
+      ? dbUrlEnv
+      : `jdbc:mysql://${config.database.host}:${config.database.port}/${config.database.name}`;
+
+  return querystring.stringify({
+    DB_URL: dbUrl,
+    DB_USER: config.database.user,
+    DB_PASS: config.database.password,
+  });
+};
+
+const ReportController = {
+  generate: async (req: Request, res: Response) => {
+    const body = req.body as ReportRequestBody;
+    const nombreReporte = body.reporte;
+    const paramString = body.paramString;
+
+    if (!nombreReporte || typeof nombreReporte !== 'string') {
+      res.status(400).json({ message: 'Falta el parametro "reporte"' });
+      return;
+    }
+
+    const jasperName = `${nombreReporte}.jasper`;
+    const reportePair = `reporte=${encodeURIComponent(jasperName)}`;
+
+    let qsCliente = '';
+    if (typeof paramString === 'string' && paramString.trim() !== '') {
+      qsCliente = paramString.includes('reporte=') ? paramString : `${reportePair}&${paramString}`;
+    } else {
+      const bodyCopy: Record<string, unknown> = { ...body };
+      delete bodyCopy.paramString;
+
+      const serialized = Object.fromEntries(
+        Object.entries(bodyCopy).filter(
+          ([key, value]) => typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean',
+        ),
+      );
+      qsCliente = querystring.stringify({ ...serialized, reporte: jasperName });
+    }
+
+    const qsFinal = `${qsCliente}&${buildDbParams()}`;
+    const jarPath = resolveJarPath();
+
+    const javaProcess = spawn('java', ['-jar', jarPath, qsFinal], {
+      cwd: path.dirname(jarPath),
+    });
+
+    let stdout = '';
+    let stderr = '';
+
+    javaProcess.stdout.on('data', (chunk) => {
+      stdout += chunk.toString();
+    });
+    javaProcess.stderr.on('data', (chunk) => {
+      stderr += chunk.toString();
+    });
+
+    javaProcess.on('close', (code) => {
+      if (code !== 0) {
+        void logRequestEvent(req, {
+          section: 'REPORT',
+          statusCode: 500,
+          message: 'Generacion de reporte fallida',
+          detail: stderr.trim(),
+          priority: 3,
+        });
+        res.status(500).json({ message: 'Generacion fallida' });
+        return;
+      }
+
+      const fileName = stdout.trim();
+      if (!fileName.endsWith('.pdf')) {
+        void logRequestEvent(req, {
+          section: 'REPORT',
+          statusCode: 500,
+          message: 'Salida inesperada del generador',
+          detail: fileName,
+          priority: 3,
+        });
+        res.status(500).json({ message: 'Salida inesperada del generador' });
+        return;
+      }
+
+      const host = req.get('host') ?? `localhost:${config.port}`;
+      const url = `${req.protocol}://${host}/generated/${fileName}`;
+
+      void logRequestEvent(req, {
+        section: 'REPORT',
+        statusCode: 200,
+        message: `Reporte ${fileName} generado`,
+        priority: 1,
+      });
+
+      res.json({ url, file: fileName });
+    });
+
+    javaProcess.on('error', (error) => {
+      void logRequestEvent(req, {
+        section: 'REPORT',
+        statusCode: 500,
+        message: 'No se pudo ejecutar el generador',
+        detail: error.message,
+        priority: 3,
+      });
+      res.status(500).json({ message: 'No se pudo iniciar el generador' });
+    });
+  },
+};
+
+export default ReportController;
